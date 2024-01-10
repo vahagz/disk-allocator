@@ -2,7 +2,7 @@ module github.com/vahagz/disk-allocator
 
 go 1.19
 
-replace github.com/vahagz/pager v0.0.1 => ./pkg/pager
+replace github.com/vahagz/rbtree v0.0.1 => ./pkg/rbtree
 
 require (
 	github.com/pkg/errors v0.9.1
