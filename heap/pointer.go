@@ -29,6 +29,7 @@ type Pointable interface {
 	IsFree() bool
 	IsNil() bool
 	Copy() Pointable
+	Equal(ptr Pointable) bool
 	binaryMarshalerUnmarshaler
 }
 
@@ -78,6 +79,10 @@ func (p *Pointer) IsNil() bool {
 
 func (p *Pointer) Copy() Pointable {
 	return &Pointer{p.ptr,&pointerMetadata{},p.pager}
+}
+
+func (p *Pointer) Equal(ptr Pointable) bool {
+	return p.Addr() == ptr.Addr() && p.Size() == ptr.Size() && p.IsFree() == ptr.IsFree()
 }
 
 func (p *Pointer) MarshalBinary() ([]byte, error) {
