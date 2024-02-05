@@ -4,8 +4,8 @@ go 1.21
 
 require (
 	github.com/pkg/errors v0.9.1
-	github.com/vahagz/pager v0.0.2-0.20240124141821-d9a252b6212b
-	github.com/vahagz/rbtree v0.0.2-0.20240124141912-f00f8bc1d2fd
+	github.com/vahagz/pager v0.0.2-0.20240129094313-d2b541b095ee
+	github.com/vahagz/rbtree v0.0.2-0.20240205141227-c534914c07ca
 )
 
 require (
