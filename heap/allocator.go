@@ -22,7 +22,6 @@ func Open(filename string, opts *Options) (*Allocator, error) {
 	pager, err := pager.Open(
 		opts.PagerOptions.FileName,
 		opts.PagerOptions.PageSize,
-		false,
 		0644,
 	)
 	if err != nil {
